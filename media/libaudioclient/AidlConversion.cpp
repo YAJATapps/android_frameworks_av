@@ -2082,6 +2082,10 @@ aidl2legacy_AudioMode_audio_mode_t(media::AudioMode aidl) {
             return AUDIO_MODE_IN_COMMUNICATION;
         case media::AudioMode::CALL_SCREEN:
             return AUDIO_MODE_CALL_SCREEN;
+        case media::AudioMode::FM:
+            return AUDIO_MODE_FM;
+        case media::AudioMode::MODE_FACTORY_TEST:
+            return AUDIO_MODE_MODE_FACTORY_TEST;
     }
     return unexpected(BAD_VALUE);
 }
@@ -2103,6 +2107,10 @@ legacy2aidl_audio_mode_t_AudioMode(audio_mode_t legacy) {
             return media::AudioMode::IN_COMMUNICATION;
         case AUDIO_MODE_CALL_SCREEN:
             return media::AudioMode::CALL_SCREEN;
+        case AUDIO_MODE_FM:
+            return media::AudioMode::FM;
+        case AUDIO_MODE_MODE_FACTORY_TEST:
+            return media::AudioMode::MODE_FACTORY_TEST;
         case AUDIO_MODE_CNT:
             break;
     }
