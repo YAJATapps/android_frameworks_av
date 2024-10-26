@@ -37,4 +37,6 @@ cc_defaults {
         "-Wno-error=format",
         "-Wno-error=return-type",
     ],
+
+    compile_multilib: "32",
 }

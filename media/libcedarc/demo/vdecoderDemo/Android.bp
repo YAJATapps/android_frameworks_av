@@ -40,4 +40,5 @@ cc_binary {
         "libcedarc_headers",
     ],
 
+    compile_multilib: "32",
 }
